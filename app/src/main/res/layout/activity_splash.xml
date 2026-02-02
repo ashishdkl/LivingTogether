@@ -23,7 +23,7 @@
             android:layout_height="@dimen/icon_size"
             android:layout_marginBottom="@dimen/grid_margin"
             android:contentDescription="@null"
-            android:src="@android:drawable/ic_menu_home"
+            android:src="@drawable/ic_house"
             app:tint="@color/white" />
 
         <TextView

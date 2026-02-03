@@ -24,6 +24,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@null"
                 android:src="@drawable/ic_arrow_back"
                 app:tint="@color/text_secondary" />
 
@@ -44,6 +45,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_gravity="center"
+                        android:contentDescription="@null"
                         android:src="@drawable/ic_verified_user"
                         app:tint="@color/primary" />
                 </FrameLayout>
@@ -53,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:gravity="center"
-                    android:text="Verify Your Identity"
+                    android:text="@string/verify_identity_title"
                     android:textColor="@color/text_primary"
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -64,7 +66,7 @@
                     android:layout_marginTop="8dp"
                     android:gravity="center"
                     android:paddingHorizontal="16dp"
-                    android:text="Gain a premium trust badge and increase your chances of finding the perfect roommate."
+                    android:text="@string/verify_identity_subtitle"
                     android:textColor="@color/text_secondary"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -81,6 +83,7 @@
                 <ImageView
                     android:layout_width="32dp"
                     android:layout_height="32dp"
+                    android:contentDescription="@null"
                     android:src="@drawable/ic_shield_person" />
 
                 <LinearLayout
@@ -93,14 +96,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Verify Identity"
+                        android:text="@string/verify_identity_option"
                         android:textColor="@color/text_primary"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Get a premium trust badge"
+                        android:text="@string/verify_identity_option_desc"
                         android:textColor="@color/text_secondary"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -108,6 +111,7 @@
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
+                    android:contentDescription="@null"
                     android:src="@drawable/ic_chevron_right" />
             </LinearLayout>
 
@@ -123,6 +127,7 @@
                 <ImageView
                     android:layout_width="32dp"
                     android:layout_height="32dp"
+                    android:contentDescription="@null"
                     android:src="@drawable/ic_person_off"
                     app:tint="@color/text_secondary" />
 
@@ -136,14 +141,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Skip for Now"
+                        android:text="@string/skip_for_now_option"
                         android:textColor="@color/text_primary"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Continue with a basic account"
+                        android:text="@string/skip_for_now_option_desc"
                         android:textColor="@color/text_secondary"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -151,6 +156,7 @@
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
+                    android:contentDescription="@null"
                     android:src="@drawable/ic_chevron_right" />
             </LinearLayout>
 
@@ -161,7 +167,7 @@
                 android:layout_marginTop="48dp"
                 android:backgroundTint="@color/accent_green"
                 android:elevation="8dp"
-                android:text="Get Verified"
+                android:text="@string/get_verified_button"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 app:cornerRadius="32dp" />
@@ -177,7 +183,6 @@
         app:itemIconTint="@color/text_secondary"
         app:itemTextColor="@color/text_secondary"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_nav_menu"
-        tools:layout_editor_absoluteX="0dp" />
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

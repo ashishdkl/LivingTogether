@@ -2,19 +2,16 @@ package com.example.livingtogether;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.livingtogether.databinding.ActivityProfileSetupBinding;
 
 public class ProfileSetupActivity extends AppCompatActivity {
 
-    private ActivityProfileSetupBinding binding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityProfileSetupBinding.inflate(getLayoutInflater());
+        ActivityProfileSetupBinding binding = ActivityProfileSetupBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         // Setup gender dropdown
@@ -22,27 +19,11 @@ public class ProfileSetupActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, genders);
         binding.actvGender.setAdapter(adapter);
 
-        binding.btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
+        binding.btnBack.setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
 
-        binding.btnSkip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                navigateToMain();
-            }
-        });
+        binding.btnSkip.setOnClickListener(v -> navigateToMain());
 
-        binding.btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // For now, navigate to main as it's the last step in this task
-                navigateToMain();
-            }
-        });
+        binding.btnNext.setOnClickListener(v -> navigateToMain());
     }
 
     private void navigateToMain() {

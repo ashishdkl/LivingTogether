@@ -69,6 +69,40 @@
     <string name="nav_messages">Messages</string>
     <string name="nav_profile">Profile</string>
 
+    <string name="add_room_title">Add Room Details</string>
+    <string name="room_photos_label">Room Photos</string>
+    <string name="tap_to_upload">Tap to upload photos</string>
+    <string name="location_label">Location</string>
+    <string name="select_area">Select Area</string>
+    <string name="select_on_map">Or select on map</string>
+    <string name="rent_label">Rent Amount</string>
+    <string name="rent_hint">Enter amount</string>
+    <string name="currency_label">NPR</string>
+    <string name="room_type_label">Room Type</string>
+    <string name="select_room_type">Select room type</string>
+    <string name="amenities_label">Amenities</string>
+    <string name="select_amenities">Select amenities</string>
+    <string name="available_from_label">Available From</string>
+    <string name="submit_post_button">Submit &amp; Post</string>
+
+    <string name="roommate_pref_title">Roommate Preferences</string>
+    <string name="age_range_label">Preferred Age Range</string>
+    <string name="gender_pref_label">Gender Preference</string>
+    <string name="occupation_pref_label">Occupation Preference</string>
+    <string name="lifestyle_pref_label">Lifestyle Preferences</string>
+    <string name="cleanliness_label">Cleanliness</string>
+    <string name="tidy">Tidy</string>
+    <string name="relaxed">Relaxed</string>
+    <string name="social_level_label">Social Level</string>
+    <string name="introvert">Introvert</string>
+    <string name="extrovert">Extrovert</string>
+    <string name="noise_tolerance_label">Noise Tolerance</string>
+    <string name="quiet">Quiet</string>
+    <string name="lively">Lively</string>
+    <string name="budget_pref_label">Budget Expectations (NPR)</string>
+    <string name="budget_hint">e.g., 15,000 - 20,000</string>
+    <string name="save_pref_button">Save Preferences</string>
+
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus

@@ -1,19 +1,17 @@
 package com.example.livingtogether;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.livingtogether.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         binding.btnBack.setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
@@ -21,13 +19,17 @@ public class MainActivity extends AppCompatActivity {
         binding.cardHaveRoom.setOnClickListener(v -> {
             binding.checkHaveRoom.setImageResource(R.drawable.ic_check_circle);
             binding.checkNeedRoom.setImageResource(R.drawable.ic_radio_unchecked);
-            Toast.makeText(this, R.string.have_room_title, Toast.LENGTH_SHORT).show();
+            
+            Intent intent = new Intent(MainActivity.this, AddRoomActivity.class);
+            startActivity(intent);
         });
 
         binding.cardNeedRoom.setOnClickListener(v -> {
             binding.checkNeedRoom.setImageResource(R.drawable.ic_check_circle);
             binding.checkHaveRoom.setImageResource(R.drawable.ic_radio_unchecked);
-            Toast.makeText(this, R.string.need_room_title, Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(MainActivity.this, RoommatePreferencesActivity.class);
+            startActivity(intent);
         });
 
         binding.bottomNavigation.setOnItemSelectedListener(item -> {

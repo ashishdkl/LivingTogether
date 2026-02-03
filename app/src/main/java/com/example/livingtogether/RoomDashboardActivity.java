@@ -13,9 +13,9 @@ public class RoomDashboardActivity extends AppCompatActivity {
         ActivityRoomDashboardBinding binding = ActivityRoomDashboardBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.bottomNavigation.setSelectedItemId(R.id.nav_home);
+        binding.bottomNavigation.bottomNavigation.setSelectedItemId(R.id.nav_home);
         
-        binding.bottomNavigation.setOnItemSelectedListener(item -> {
+        binding.bottomNavigation.bottomNavigation.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
             if (id == R.id.nav_profile) {
                 startActivity(new Intent(this, UserProfileActivity.class));

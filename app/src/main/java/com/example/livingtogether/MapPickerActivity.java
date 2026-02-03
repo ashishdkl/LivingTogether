@@ -50,8 +50,6 @@ public class MapPickerActivity extends AppCompatActivity implements OnMapReadyCa
         LatLng kathmandu = new LatLng(27.7172, 85.3240);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(kathmandu, 13f));
 
-        mMap.setOnCameraIdleListener(() -> {
-            selectedLocation = mMap.getCameraPosition().target;
-        });
+        mMap.setOnCameraIdleListener(() -> selectedLocation = mMap.getCameraPosition().target);
     }
 }

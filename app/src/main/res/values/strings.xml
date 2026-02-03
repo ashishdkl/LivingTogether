@@ -150,6 +150,12 @@
     <string name="val_2">2</string>
     <string name="val_4">4</string>
 
+    <string name="cozy_room_thamel">Cozy Room in Thamel</string>
+    <string name="rent_amount_sample">Rs. 15,000/month</string>
+    <string name="notif_rohan">Rohan Sharma liked your room</string>
+    <string name="notif_priya">Priya Joshi liked your room</string>
+    <string name="sample_view_count">23</string>
+
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus

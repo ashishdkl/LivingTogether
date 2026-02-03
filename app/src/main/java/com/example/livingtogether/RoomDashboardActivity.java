@@ -13,6 +13,7 @@ public class RoomDashboardActivity extends AppCompatActivity {
         ActivityRoomDashboardBinding binding = ActivityRoomDashboardBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // Access the view through the included binding: binding.[includeId].[viewId]
         binding.bottomNavigation.bottomNavigation.setSelectedItemId(R.id.nav_home);
         
         binding.bottomNavigation.bottomNavigation.setOnItemSelectedListener(item -> {

@@ -9,6 +9,33 @@
     <string name="splash_title">Living Together</string>
     <string name="splash_subtitle">Find Your Perfect Roommate</string>
 
+    <string name="login_title">Welcome Back</string>
+    <string name="login_subtitle">Login to your account to continue</string>
+    <string name="email_label">Email Address</string>
+    <string name="password_label">Password</string>
+    <string name="login_button">Login</string>
+    <string name="no_account">Don\'t have an account? Sign Up</string>
+
+    <string name="signup_title">Create Account</string>
+    <string name="signup_subtitle">Join us to find your perfect roommate</string>
+    <string name="name_label">Full Name</string>
+    <string name="confirm_password_label">Confirm Password</string>
+    <string name="signup_button">Sign Up</string>
+    <string name="has_account">Already have an account? Login</string>
+
+    <string name="about_you_title">About you</string>
+    <string name="step_1_of_5">Step 1 of 5</string>
+    <string name="first_name_label">First Name</string>
+    <string name="last_name_label">Last Name</string>
+    <string name="dob_label">Date of Birth</string>
+    <string name="gender_label">Gender</string>
+    <string name="add_photos_title">Add photos</string>
+    <string name="add_photos_subtitle">Upload up to 4 photos. A clear face photo is required.</string>
+    <string name="bio_label">Bio</string>
+    <string name="bio_hint">Tell us about yourself, your lifestyle, and what you\'re looking for in a roommate.</string>
+    <string name="skip_button">Skip</string>
+    <string name="next_button">Next</string>
+
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus

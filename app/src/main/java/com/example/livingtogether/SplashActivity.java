@@ -1,5 +1,6 @@
 package com.example.livingtogether;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,6 +12,7 @@ import android.view.animation.ScaleAnimation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+@SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -22,14 +24,11 @@ public class SplashActivity extends AppCompatActivity {
         startPulseAnimation(findViewById(R.id.dot2), 200);
         startPulseAnimation(findViewById(R.id.dot3), 400);
 
-        // Delay for 3 seconds then start MainActivity
-        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
+        // Delay for 3 seconds then start WelcomeActivity
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            Intent intent = new Intent(SplashActivity.this, WelcomeActivity.class);
+            startActivity(intent);
+            finish();
         }, 3000);
     }
 
@@ -51,7 +50,5 @@ public class SplashActivity extends AppCompatActivity {
 
         view.startAnimation(scaleAnimation);
         view.startAnimation(alphaAnimation);
-        // Note: startAnimation overrides if called twice on same view unless using AnimationSet.
-        // Let's use AnimationSet for both.
     }
 }

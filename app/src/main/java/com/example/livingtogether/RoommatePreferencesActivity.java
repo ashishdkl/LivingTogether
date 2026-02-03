@@ -1,5 +1,6 @@
 package com.example.livingtogether;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,7 +27,9 @@ public class RoommatePreferencesActivity extends AppCompatActivity {
         binding.btnBack.setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
 
         binding.btnSavePreferences.setOnClickListener(v -> {
-            // Handle saving preferences logic here
+            // After saving preferences, navigate to Room Dashboard
+            Intent intent = new Intent(RoommatePreferencesActivity.this, RoomDashboardActivity.class);
+            startActivity(intent);
             finish();
         });
     }

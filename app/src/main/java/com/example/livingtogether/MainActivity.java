@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
             binding.checkNeedRoom.setImageResource(R.drawable.ic_check_circle);
             binding.checkHaveRoom.setImageResource(R.drawable.ic_radio_unchecked);
 
-            Intent intent = new Intent(MainActivity.this, RoommatePreferencesActivity.class);
+            // Updated flow: Link "I need a room" only to SeekerPreferencesActivity
+            Intent intent = new Intent(MainActivity.this, SeekerPreferencesActivity.class);
             startActivity(intent);
         });
 

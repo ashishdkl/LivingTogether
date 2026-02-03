@@ -21,6 +21,14 @@
             android:value="${MAPS_API_KEY}" />
 
         <activity
+            android:name=".SeekerPreferencesActivity"
+            android:exported="false"
+            android:label="@string/room_pref_title" />
+        <activity
+            android:name=".RoomDashboardActivity"
+            android:exported="false"
+            android:label="@string/my_room_title" />
+        <activity
             android:name=".RoommatePreferencesActivity"
             android:exported="false"
             android:label="@string/roommate_pref_title" />

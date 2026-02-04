@@ -55,35 +55,47 @@ public class RoomRecommendationsActivity extends AppCompatActivity {
     private void filterRooms(float min, float max, String location, String type) {
         List<Room> filtered = new ArrayList<>();
         for (Room room : rooms) {
-            // Apply filtering logic based on preferences (simplified)
-            if (room.price >= min && room.price <= max) {
-                // You can add location and type matching here as well
+            // Apply filtering logic based on preferences
+            boolean matchesPrice = room.price >= min && room.price <= max;
+            boolean matchesLocation = location == null || location.isEmpty() || room.location.toLowerCase().contains(location.toLowerCase());
+            boolean matchesType = type == null || type.equals("Select") || room.type.equalsIgnoreCase(type);
+
+            if (matchesPrice && matchesLocation && matchesType) {
                 filtered.add(room);
             }
         }
+        
+        // If no strict match, fallback to just price for demo purposes
+        if (filtered.isEmpty()) {
+            for (Room room : rooms) {
+                if (room.price >= min && room.price <= max) {
+                    filtered.add(room);
+                }
+            }
+        }
+        
         rooms = filtered;
     }
 
     private void displayCurrentRoom() {
-        if (rooms.isEmpty()) {
+        if (rooms == null || rooms.isEmpty()) {
             Toast.makeText(this, "No matching rooms found.", Toast.LENGTH_LONG).show();
             binding.recommendationCard.setVisibility(android.view.View.GONE);
             return;
         }
         
-        Room room = rooms.get(currentRoomIndex);
+        Room currentRoom = rooms.get(currentRoomIndex);
         binding.recommendationCard.setVisibility(android.view.View.VISIBLE);
         
-        // Update UI with room data (assuming these IDs exist in your updated XML)
-        binding.tvRoomType.setText(room.title);
-        binding.tvRoomPrice.setText(String.format(java.util.Locale.getDefault(), "NPR %d", room.price));
-        binding.tvOwnerName.setText(room.ownerName);
-        binding.tvRoomLocation.setText(room.location);
-        binding.tvRoomDesc.setText(room.desc);
+        binding.tvRoomType.setText(currentRoom.title);
+        binding.tvRoomPrice.setText(String.format(java.util.Locale.getDefault(), "NPR %d", currentRoom.price));
+        binding.tvOwnerName.setText(currentRoom.ownerName);
+        binding.tvRoomLocation.setText(currentRoom.location);
+        binding.tvRoomDesc.setText(currentRoom.desc);
     }
 
     private void showNextRoom() {
-        if (currentRoomIndex < rooms.size() - 1) {
+        if (rooms != null && currentRoomIndex < rooms.size() - 1) {
             currentRoomIndex++;
             displayCurrentRoom();
         } else {

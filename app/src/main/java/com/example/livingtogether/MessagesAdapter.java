@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import com.bumptech.glide.Glide;
 import com.example.livingtogether.databinding.ItemConversationBinding;
 import java.util.List;
 
@@ -30,6 +31,13 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.Conver
         holder.binding.tvSenderName.setText(model.getSenderName());
         holder.binding.tvLastMessage.setText(model.getLastMessage());
         holder.binding.tvTimestamp.setText(model.getTimestamp());
+
+        // Use getProfileImageUrl() with Glide to load images and resolve unused warning
+        Glide.with(holder.itemView.getContext())
+                .load(model.getProfileImageUrl())
+                .placeholder(R.drawable.ic_person)
+                .circleCrop()
+                .into(holder.binding.ivProfile);
 
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(v.getContext(), ChatDetailActivity.class);

@@ -1,6 +1,7 @@
 package com.example.livingtogether;
 
 import android.os.Bundle;
+import android.text.Editable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import com.example.livingtogether.databinding.ActivityChatDetailBinding;
@@ -37,19 +38,22 @@ public class ChatDetailActivity extends AppCompatActivity {
 
         binding.btnBack.setOnClickListener(v -> finish());
 
-        // 3. Send Button Logic
+        // 3. Send Button Logic with Null Safety
         binding.btnSend.setOnClickListener(v -> {
-            String text = binding.etMessage.getText().toString().trim();
-            if (!text.isEmpty()) {
-                // Add message to list
-                messageList.add(new ChatMessage(text, true));
-                
-                // Notify adapter and scroll to bottom
-                adapter.notifyItemInserted(messageList.size() - 1);
-                binding.rvChatMessages.scrollToPosition(messageList.size() - 1);
-                
-                // Clear input
-                binding.etMessage.setText("");
+            Editable editable = binding.etMessage.getText();
+            if (editable != null) {
+                String text = editable.toString().trim();
+                if (!text.isEmpty()) {
+                    // Add message to list
+                    messageList.add(new ChatMessage(text, true));
+                    
+                    // Notify adapter and scroll to bottom
+                    adapter.notifyItemInserted(messageList.size() - 1);
+                    binding.rvChatMessages.scrollToPosition(messageList.size() - 1);
+                    
+                    // Clear input
+                    binding.etMessage.setText("");
+                }
             }
         });
     }

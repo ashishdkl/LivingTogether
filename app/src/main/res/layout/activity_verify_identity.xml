@@ -175,14 +175,11 @@
         </LinearLayout>
     </ScrollView>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <include
         android:id="@+id/bottom_navigation"
+        layout="@layout/layout_footer"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@color/surface"
-        app:itemIconTint="@color/text_secondary"
-        app:itemTextColor="@color/text_secondary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

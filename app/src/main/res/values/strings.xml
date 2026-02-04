@@ -168,10 +168,10 @@
     <string name="received_message_placeholder">Received Message</string>
     <string name="sent_message_placeholder">Sent Message</string>
     <string name="sender_name_placeholder">Sender Name</string>
-    <string name="last_message_placeholder">Last message goes here...</string>
+    <string name="last_message_placeholder">Last message goes here&#8230;</string>
     <string name="timestamp_placeholder">12:45 PM</string>
     <string name="chat_title">Chat</string>
-    <string name="type_message_hint">Type a message...</string>
+    <string name="type_message_hint">Type a message&#8230;</string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris

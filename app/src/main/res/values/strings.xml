@@ -167,8 +167,9 @@
 
     <string name="received_message">Received Message</string>
     <string name="sent_message">Sent Message</string>
-    <string name="sender_name">Sender Name</string>
+    <string name="sender_name_placeholder">Sender Name</string>
     <string name="last_message_placeholder">Last message goes here&#8230;</string>
+    <string name="default_time">12:45 PM</string>
     <string name="chat_title">Chat</string>
     <string name="type_message_hint">Type a message&#8230;</string>
 

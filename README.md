@@ -23,7 +23,7 @@ Frontend (Mobile Application)
 * RESTful APIs
 
 Database
-* MySQL / SQLite (as per implementation)
+* MySQL / SQLite (as per implementation).
 
 Key Features
 * User Registration and Login
